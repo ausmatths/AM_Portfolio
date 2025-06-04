@@ -5,12 +5,17 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  type LinksFunction,
+  type ErrorResponse,
 } from "react-router";
 
-import type { Route } from "./+types/root";
+type ErrorBoundaryProps = {
+  error: unknown;
+};
+
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [
+export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -40,12 +45,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-
 export default function App() {
   return <Outlet />;
 }
-
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({ error }: ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;

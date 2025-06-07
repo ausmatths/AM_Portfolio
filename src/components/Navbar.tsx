@@ -20,9 +20,13 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <img 
+            src={logo} 
+            alt='logo' 
+            className='w-14 h-14 sm:w-16 sm:h-16 object-contain' 
+          />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Austin <span className='sm:block hidden'>| Computer Science</span>
+            Austin <span className='sm:block hidden'>| Software Engineer</span>
           </p> 
         </Link>
 
@@ -46,7 +50,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 

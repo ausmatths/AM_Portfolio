@@ -15,18 +15,18 @@
 
 /* Navbar logo size override - Larger */
 .navbar-logo {
-  width: 40px;
-  height: 40px;
-  max-width: 40px;
-  max-height: 40px;
+  width: 48px;
+  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
 }
 
 @media (min-width: 640px) {
   .navbar-logo {
-    width: 48px;
-    height: 48px;
-    max-width: 48px;
-    max-height: 48px;
+    width: 56px;
+    height: 56px;
+    max-width: 56px;
+    max-height: 56px;
   }
 }
 

@@ -13,20 +13,20 @@
   color-scheme: dark;
 }
 
-/* Navbar logo size override */
+/* Navbar logo size override - Larger */
 .navbar-logo {
-  width: 32px;
-  height: 32px;
-  max-width: 32px;
-  max-height: 32px;
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
 }
 
 @media (min-width: 640px) {
   .navbar-logo {
-    width: 36px;
-    height: 36px;
-    max-width: 36px;
-    max-height: 36px;
+    width: 48px;
+    height: 48px;
+    max-width: 48px;
+    max-height: 48px;
   }
 }
 

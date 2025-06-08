@@ -13,6 +13,23 @@
   color-scheme: dark;
 }
 
+/* Navbar logo size override */
+.navbar-logo {
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+@media (min-width: 640px) {
+  .navbar-logo {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

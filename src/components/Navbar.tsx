@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-2 fixed top-0 z-20 ${
+      } w-full flex items-center py-3 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -47,19 +47,19 @@ const Navbar = () => {
             alt='logo' 
             className='navbar-logo object-contain'
           />
-          <p className='text-white text-[12px] sm:text-[14px] font-medium cursor-pointer flex'>
+          <p className='text-white text-[14px] sm:text-[16px] font-medium cursor-pointer flex'>
             Austin &nbsp;
-            <span className='sm:block hidden text-[11px] sm:text-[13px]'> | Software Engineer</span>
+            <span className='sm:block hidden text-[13px] sm:text-[14px]'> | Software Engineer</span>
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-6'>
+        <ul className='list-none hidden sm:flex flex-row gap-8'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[12px] font-medium cursor-pointer`}
+              } hover:text-white text-[14px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -71,20 +71,20 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[18px] h-[18px] object-contain cursor-pointer'
+            className='w-[20px] h-[20px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-3 black-gradient absolute top-10 right-0 mx-4 my-2 min-w-[100px] z-10 rounded-xl`}
+            } p-4 black-gradient absolute top-12 right-0 mx-4 my-2 min-w-[120px] z-10 rounded-xl`}
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-2'>
+            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-3'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[11px] ${
+                  className={`font-poppins font-medium cursor-pointer text-[13px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {

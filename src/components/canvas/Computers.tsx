@@ -26,38 +26,82 @@ const Computers = ({ isMobile }: ComputersProps) => {
         shadow-mapSize={1024}
       />
       
-      {/* Monitor screen glow effects */}
+      {/* Monitor screen glow - enhanced */}
       <pointLight 
         position={[0, -1, 0]} 
-        intensity={1.5} 
+        intensity={2} 
         color="#4a9eff" 
-        distance={8}
+        distance={10}
       />
       <pointLight 
         position={[2, -1, 0]} 
-        intensity={1.2} 
+        intensity={1.8} 
         color="#ffffff" 
-        distance={6}
+        distance={8}
       />
       
-      {/* RGB lighting effects */}
+      {/* PC Case RGB fans - positioned to match your setup */}
       <pointLight 
-        position={[3, -2, 2]} 
-        intensity={1} 
-        color="#ff6b9d" 
+        position={[3.5, -1, 2]} 
+        intensity={1.5} 
+        color="#ff1493" 
+        distance={6}
+      />
+      <pointLight 
+        position={[3.5, -2, 2]} 
+        intensity={1.3} 
+        color="#8a2be2" 
         distance={5}
       />
       <pointLight 
-        position={[-2, -2, 2]} 
-        intensity={1} 
-        color="#00d4ff" 
+        position={[3.5, -3, 2]} 
+        intensity={1.2} 
+        color="#00bfff" 
         distance={5}
       />
+      
+      {/* Under-desk RGB strip lighting */}
       <pointLight 
-        position={[1, -2, 3]} 
+        position={[-2, -4, 0]} 
+        intensity={1} 
+        color="#ff4500" 
+        distance={8}
+      />
+      <pointLight 
+        position={[0, -4, 0]} 
+        intensity={1} 
+        color="#00ff7f" 
+        distance={8}
+      />
+      <pointLight 
+        position={[2, -4, 0]} 
+        intensity={1} 
+        color="#1e90ff" 
+        distance={8}
+      />
+      
+      {/* Keyboard RGB glow */}
+      <pointLight 
+        position={[0, -3.5, -1]} 
         intensity={0.8} 
-        color="#a855f7" 
+        color="#ff69b4" 
         distance={4}
+      />
+      
+      {/* Mousepad RGB glow */}
+      <pointLight 
+        position={[1.5, -3.5, -0.5]} 
+        intensity={0.7} 
+        color="#9932cc" 
+        distance={3}
+      />
+      
+      {/* Additional accent lighting */}
+      <pointLight 
+        position={[-3, -2, 1]} 
+        intensity={0.8} 
+        color="#00ffff" 
+        distance={6}
       />
       
       {/* General coverage lights */}

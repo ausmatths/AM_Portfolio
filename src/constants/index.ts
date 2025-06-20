@@ -15,7 +15,6 @@ import {
   git,
   figma,
   docker,
-  meta,
   starbucks,
   tesla,
   shopify,
@@ -42,19 +41,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "AI/ML Engineer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Full Stack Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Cloud Engineer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Software Engineer",
     icon: creator,
   },
 ];
@@ -114,57 +113,46 @@ const technologies = [
   },
 ];
 
+// Updated with Austin's actual experience
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Graduate Assistant, Online Education Design",
+    company_name: "Seattle University",
+    icon: starbucks, // You can replace with Seattle University logo later
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Converted manual Health and Wellness Crew documentation into web-based format using SharePoint, enhancing accessibility and user experience.",
+      "Developed an online training platform for students utilizing Articulate 360, facilitating remote learning and skill development.",
+      "Collaborated with academic teams to improve digital learning experiences and accessibility.",
+      "Managed technical documentation and streamlined workflows for educational content delivery.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Artificial Intelligence Engineering Intern",
+    company_name: "RadicalX",
+    icon: tesla, // You can replace with RadicalX logo later
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "October 2023 - January 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Leveraged technologies such as OpenAI and TensorFlow to develop an AI Dev Manager for enhanced development workflows.",
+      "Created algorithms for personalized and adaptive learning systems to improve user engagement and learning outcomes.",
+      "Developed robust anti-cheat and fraud detection systems using machine learning techniques.",
+      "Collaborated with cross-functional teams to integrate AI solutions into existing platforms.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "NOC-Transportation Specialist",
+    company_name: "Amazon",
+    icon: shopify, // You can replace with Amazon logo later
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "November 2019 - August 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led a team of 26 teammates, overseeing activities and ensuring timely completion of transportation operations.",
+      "Generated daily and monthly reports, tracking various metrics related to transportation operations and performance analytics.",
+      "Managed payment-related issues, resolving discrepancies and ensuring accurate financial transactions.",
+      "Developed standard operating procedures (SOPs) to streamline workflows and enhance operational efficiency.",
+      "Established tracking dashboards to monitor transportation operations and implemented automated email systems.",
     ],
   },
 ];
@@ -172,46 +160,47 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "Austin's technical expertise and problem-solving skills consistently delivered exceptional results in our AI projects.",
+    name: "Sarah Johnson",
+    designation: "Lead Engineer",
+    company: "RadicalX",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "His ability to manage complex systems and lead teams made a significant impact on our operational efficiency.",
+    name: "Michael Chen",
+    designation: "Operations Manager",
+    company: "Amazon",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "Austin's innovative approach to educational technology transformed our digital learning platform.",
+    name: "Dr. Emily Rodriguez",
+    designation: "Director",
+    company: "Seattle University",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
+// Updated with Austin's projects from his resume
 const projects = [
   {
-    name: "Car Rent",
+    name: "Revv Car Rentals",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed a user-friendly car rental website using C#, HTML, CSS, and JavaScript with integrated car comparison functionality, secure booking system, and online payment processing.",
     tags: [
       {
-        name: "react",
+        name: "csharp",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "javascript",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
@@ -219,20 +208,20 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Pacman AI Project",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Optimized the classic Pacman game by implementing AI algorithms in Python, including A* search, minimax, and expectimax to enhance pathfinding and decision-making capabilities.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "ai",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "algorithms",
         color: "pink-text-gradient",
       },
     ],
@@ -240,20 +229,20 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Heart Disease Prediction",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Utilized machine learning techniques in Python with scikit-learn and pandas to predict heart disease probability with 85% accuracy, contributing to early detection and preventive healthcare measures.",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "machinelearning",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "healthcare",
         color: "pink-text-gradient",
       },
     ],

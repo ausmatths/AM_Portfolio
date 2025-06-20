@@ -46,7 +46,7 @@ const Navbar = () => {
             className='navbar-logo object-contain'
           />
           <p className='text-white text-[14px] sm:text-[16px] font-medium cursor-pointer flex'>
-            Austin &nbsp;
+            Austin Matthews &nbsp;
             <span className='sm:block hidden text-[13px] sm:text-[14px]'> | Software Engineer</span>
           </p>
         </Link>

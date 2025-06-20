@@ -8,40 +8,27 @@ interface ComputersProps {
 }
 
 const Computers = ({ isMobile }: ComputersProps) => {
-  console.log("🔍 Loading GLTF model...");
-  
   const computer = useGLTF("/desktop_pc/scene.gltf");
-  console.log("✅ GLTF loaded successfully:", computer);
-  console.log("📦 Scene children:", computer.scene.children);
   
   return (
-    <group>
-      {/* Bright lighting to see everything */}
-      <ambientLight intensity={0.8} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      <directionalLight position={[0, 10, 5]} intensity={0.5} />
-      
-      {/* Test cubes to verify positioning */}
-      <mesh position={[-4, 0, 0]}>
-        <boxGeometry args={[0.5, 0.5, 0.5]} />
-        <meshStandardMaterial color="red" />
-      </mesh>
-      
-      {/* Your computer model */}
+    <mesh>
+      <hemisphereLight intensity={0.15} groundColor='black' />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
+      />
+      <pointLight intensity={1} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
-      
-      {/* Another test cube */}
-      <mesh position={[4, 0, 0]}>
-        <boxGeometry args={[0.5, 0.5, 0.5]} />
-        <meshStandardMaterial color="blue" />
-      </mesh>
-    </group>
+    </mesh>
   );
 };
 
@@ -67,12 +54,15 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [0, 0, 10], fov: 75 }}  
+      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      style={{ height: "100vh", width: "100%" }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={true} />  {}
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />

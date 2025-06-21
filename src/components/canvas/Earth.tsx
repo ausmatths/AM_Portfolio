@@ -1,52 +1,39 @@
 import { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Preload } from '@react-three/drei';
+import { OrbitControls, Preload } from '@react-three/drei'; // ← Fixed: Removed unused Sphere
 import * as THREE from 'three';
 import CanvasLoader from '../Loader';
 
 const Earth = () => {
-  const earthRef = useRef<THREE.Mesh>(null!);
-  const cloudsRef = useRef<THREE.Mesh>(null!);
+  const meshRef = useRef<THREE.Mesh>(null!);
   const atmosphereRef = useRef<THREE.Mesh>(null!);
 
   useFrame((_, delta) => {
-    if (earthRef.current) earthRef.current.rotation.y += delta * 0.2;
-    if (cloudsRef.current) cloudsRef.current.rotation.y += delta * 0.25;
+    if (meshRef.current) {
+      meshRef.current.rotation.y += delta * 0.5; // Slow rotation
+    }
   });
-
-  const earthTexture = new THREE.CanvasTexture(createDetailedEarthTexture());
-  const cloudTexture = new THREE.CanvasTexture(createCloudTexture());
 
   return (
     <group>
-      {/* Earth Surface */}
-      <mesh ref={earthRef}>
+      {/* Main Earth */}
+      <mesh ref={meshRef}>
         <sphereGeometry args={[2, 64, 64]} />
-        <meshPhongMaterial 
-          map={earthTexture}
-          shininess={1000}
-          specular={new THREE.Color(0x2266aa)}
-        />
+        <meshPhongMaterial>
+          <primitive 
+            object={new THREE.CanvasTexture(createEarthTexture())} 
+            attach="map" 
+          />
+        </meshPhongMaterial>
       </mesh>
       
-      {/* Clouds Layer */}
-      <mesh ref={cloudsRef}>
-        <sphereGeometry args={[2.01, 64, 64]} />
-        <meshPhongMaterial
-          map={cloudTexture}
-          transparent
-          opacity={0.4}
-          depthWrite={false}
-        />
-      </mesh>
-      
-      {/* Atmosphere */}
-      <mesh ref={atmosphereRef}>
-        <sphereGeometry args={[2.1, 64, 64]} />
+      {/* Atmosphere Glow */}
+      <mesh ref={atmosphereRef} scale={[1.1, 1.1, 1.1]}>
+        <sphereGeometry args={[2, 64, 64]} />
         <meshBasicMaterial
-          color="#87CEEB"
+          color="#4FC3F7"
           transparent
-          opacity={0.1}
+          opacity={0.2}
           side={THREE.BackSide}
         />
       </mesh>
@@ -54,65 +41,58 @@ const Earth = () => {
   );
 };
 
-const createDetailedEarthTexture = () => {
+// Create Earth texture with continents
+const createEarthTexture = () => {
   const canvas = document.createElement('canvas');
-  canvas.width = 1024;
-  canvas.height = 512;
+  canvas.width = 512;
+  canvas.height = 256;
   const ctx = canvas.getContext('2d')!;
 
-  // Deep ocean blue
-  const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  gradient.addColorStop(0, '#001f3f');
-  gradient.addColorStop(0.5, '#0074D9');
-  gradient.addColorStop(1, '#001f3f');
-  ctx.fillStyle = gradient;
+  // Ocean base
+  ctx.fillStyle = '#2196F3';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Detailed continents
-  const continents = [
-    // North America
-    { x: 150, y: 120, w: 80, h: 100, color: '#228B22' },
-    // South America  
-    { x: 200, y: 280, w: 50, h: 120, color: '#32CD32' },
-    // Africa
-    { x: 480, y: 180, w: 60, h: 140, color: '#DAA520' },
-    // Europe
-    { x: 460, y: 100, w: 40, h: 30, color: '#228B22' },
-    // Asia
-    { x: 600, y: 120, w: 200, h: 100, color: '#8FBC8F' },
-    // Australia
-    { x: 750, y: 320, w: 60, h: 40, color: '#CD853F' }
-  ];
+  // Add continent-like shapes
+  ctx.fillStyle = '#4CAF50';
+  
+  // North America
+  ctx.beginPath();
+  ctx.ellipse(100, 80, 40, 30, 0, 0, Math.PI * 2);
+  ctx.fill();
+  
+  // South America
+  ctx.beginPath();
+  ctx.ellipse(120, 150, 25, 40, 0, 0, Math.PI * 2);
+  ctx.fill();
+  
+  // Africa
+  ctx.beginPath();
+  ctx.ellipse(260, 120, 30, 50, 0, 0, Math.PI * 2);
+  ctx.fill();
+  
+  // Europe
+  ctx.beginPath();
+  ctx.ellipse(250, 70, 20, 15, 0, 0, Math.PI * 2);
+  ctx.fill();
+  
+  // Asia
+  ctx.beginPath();
+  ctx.ellipse(350, 80, 60, 35, 0, 0, Math.PI * 2);
+  ctx.fill();
+  
+  // Australia
+  ctx.beginPath();
+  ctx.ellipse(400, 180, 25, 15, 0, 0, Math.PI * 2);
+  ctx.fill();
 
-  continents.forEach(continent => {
-    ctx.fillStyle = continent.color;
-    ctx.beginPath();
-    ctx.ellipse(continent.x, continent.y, continent.w, continent.h, 0, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  return canvas;
-};
-
-const createCloudTexture = () => {
-  const canvas = document.createElement('canvas');
-  canvas.width = 1024;
-  canvas.height = 512;
-  const ctx = canvas.getContext('2d')!;
-
-  ctx.fillStyle = 'transparent';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  // Create cloud patterns
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-  for (let i = 0; i < 50; i++) {
+  // Add some cloud-like effects
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+  for (let i = 0; i < 20; i++) {
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height;
-    const w = Math.random() * 100 + 30;
-    const h = Math.random() * 30 + 10;
-    
+    const radius = Math.random() * 15 + 5;
     ctx.beginPath();
-    ctx.ellipse(x, y, w, h, 0, 0, Math.PI * 2);
+    ctx.ellipse(x, y, radius, radius * 0.6, 0, 0, Math.PI * 2);
     ctx.fill();
   }
 
@@ -139,16 +119,17 @@ const EarthCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 6}
-          autoRotateSpeed={1}
+          autoRotateSpeed={0.5}
         />
         
-        <ambientLight intensity={0.2} />
+        {/* Improved Lighting */}
+        <ambientLight intensity={0.3} />
         <directionalLight 
           position={[5, 3, 5]} 
-          intensity={1.5}
+          intensity={1}
           castShadow
         />
-        <pointLight position={[-10, 0, -10]} intensity={0.3} color="#4FC3F7" />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#4FC3F7" />
         
         <Earth />
         <Preload all />

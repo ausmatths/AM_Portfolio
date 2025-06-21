@@ -185,7 +185,7 @@ const experiences = [
   {
     title: "Graduate Assistant, Online Education Design",
     company_name: "Seattle University",
-    icon: starbucks,
+    icon: starbucks, // You can replace with Seattle University logo later
     iconBg: "#383E56",
     date: "June 2024 - Present",
     points: [
@@ -198,28 +198,31 @@ const experiences = [
   {
     title: "Artificial Intelligence Engineering Intern",
     company_name: "RadicalX",
-    icon: tesla,
+    icon: tesla, // You can replace with RadicalX logo later
     iconBg: "#E6DEDD",
     date: "October 2023 - January 2024",
     points: [
       "Leveraged technologies such as OpenAI and TensorFlow to develop an AI Dev Manager for enhanced development workflows.",
       "Created algorithms for personalized and adaptive learning systems to improve user engagement and learning outcomes.",
       "Developed robust anti-cheat and fraud detection systems using machine learning techniques.",
-      "Collaborated with cross-functional teams to integrate AI solutions into existing platforms.",
+      "Collaborated with cross-functional teams including university students to integrate AI solutions into existing platforms.",
     ],
   },
   {
-    title: "NOC-Transportation Specialist",
+    title: "Transportation Specialist",
     company_name: "Amazon",
-    icon: shopify,
+    icon: shopify, // You can replace with Amazon logo later
     iconBg: "#383E56",
-    date: "November 2019 - August 2022",
+    date: "September 2019 - August 2022",
     points: [
-      "Led a team of 26 teammates, overseeing activities and ensuring timely completion of transportation operations.",
+      "Led a team of 26 teammates, overseeing their activities and ensuring timely completion of transportation operations.",
       "Generated daily and monthly reports, tracking various metrics related to transportation operations and performance analytics.",
       "Managed payment-related issues, resolving discrepancies and ensuring accurate financial transactions.",
+      "Handled termination requests, following established protocols and ensuring smooth offboarding processes.",
       "Developed standard operating procedures (SOPs) to streamline workflows and enhance operational efficiency.",
-      "Established tracking dashboards to monitor transportation operations and implemented automated email systems.",
+      "Established tracking dashboards to monitor transportation operations and identify areas for improvement.",
+      "Implemented automated email systems, reducing manual effort and improving communication efficiency.",
+      "Successfully met delivery targets, contributing to the achievement of overall operational goals.",
     ],
   },
 ];
@@ -227,27 +230,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "Austin's technical expertise and problem-solving skills consistently delivered exceptional results in our AI projects.",
-    name: "Sarah Johnson",
-    designation: "Lead Engineer",
+      "Austin's technical expertise in AI and machine learning consistently delivered exceptional results in our collaborative projects. His ability to work with university teams was outstanding.",
+    name: "Talha Sabri",
+    designation: "Founder",
     company: "RadicalX",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
     testimonial:
-      "His ability to manage complex systems and lead teams made a significant impact on our operational efficiency.",
-    name: "Michael Chen",
-    designation: "Operations Manager", 
+      "Austin's leadership skills and systematic approach to transportation operations made a significant impact on our team's efficiency and goal achievement.",
+    name: "Anubhav Singla",
+    designation: "Program Manager",
     company: "Amazon",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
   },
   {
     testimonial:
-      "Austin's innovative approach to educational technology transformed our digital learning platform.",
-    name: "Dr. Emily Rodriguez",
-    designation: "Director",
+      "Austin's innovative approach to educational technology and documentation transformation has greatly enhanced our student support systems.",
+    name: "Chris Fiorello",
+    designation: "Assistant Dean of Students, Care & Support",
     company: "Seattle University",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://randomuser.me/api/portraits/men/3.jpg",
   },
 ];
 

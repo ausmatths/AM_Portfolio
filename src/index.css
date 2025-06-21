@@ -199,3 +199,40 @@
 .experience-company {
   margin: 0;
 }
+
+/* Project card hover effects */
+.card-img_hover {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-img_hover:hover {
+  opacity: 1;
+}
+
+/* Gradient text colors */
+.blue-text-gradient {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.green-text-gradient {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pink-text-gradient {
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Black gradient for GitHub button */
+.black-gradient {
+  background: linear-gradient(90deg, #161329 0%, rgba(60, 51, 80, 0) 100%);
+}

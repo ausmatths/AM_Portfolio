@@ -251,69 +251,133 @@ const testimonials = [
   },
 ];
 
+// Updated with your real GitHub projects
 const projects = [
   {
-    name: "Revv Car Rentals",
+    name: "AI Question-Answer Generation App",
     description:
-      "Developed a user-friendly car rental website using C#, HTML, CSS, and JavaScript with integrated car comparison functionality, secure booking system, and online payment processing.",
+      "Advanced AI-powered application that generates intelligent question-answer pairs using natural language processing. Built with modern AI frameworks to enhance learning and content creation workflows.",
     tags: [
       {
-        name: "csharp",
+        name: "AI/ML",
         color: "blue-text-gradient",
       },
       {
-        name: "javascript",
+        name: "Python",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "NLP",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ausmatths/Question-Answer-Generation-App",
   },
+ {
+  name: "Hiker Connect",
+  description:
+    "Social platform connecting hiking enthusiasts with trail recommendations, group formation, and safety features. Includes real-time location sharing and community-driven trail reviews with interactive maps and weather integration.",
+  tags: [
+    {
+      name: "React",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "Node.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "Social",
+      color: "pink-text-gradient",
+    },
+  ],
+  image: jobit,
+  source_code_link: "https://github.com/ausmatths/hiker_connect",
+},
   {
-    name: "Pacman AI Project",
+    name: "Heart Disease Prediction System",
     description:
-      "Optimized the classic Pacman game by implementing AI algorithms in Python, including A* search, minimax, and expectimax to enhance pathfinding and decision-making capabilities.",
+      "Machine learning model achieving 85% accuracy in predicting heart disease risk based on patient parameters. Implements logistic regression with scikit-learn for early detection and preventive healthcare.",
     tags: [
       {
-        name: "python",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "ai",
+        name: "MachineLearning",
         color: "green-text-gradient",
       },
       {
-        name: "algorithms",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Heart Disease Prediction",
-    description:
-      "Utilized machine learning techniques in Python with scikit-learn and pandas to predict heart disease probability with 85% accuracy, contributing to early detection and preventive healthcare measures.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "machinelearning",
-        color: "green-text-gradient",
-      },
-      {
-        name: "healthcare",
+        name: "Healthcare",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ausmatths/Heart-Disease-Prediction-Clone",
+  },
+  {
+    name: "AI Pacman Projects",
+    description:
+      "Enhanced classic Pacman game with AI algorithms including A* search, minimax, and expectimax for intelligent pathfinding and strategic decision-making. Optimized for performance and player engagement.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AI-Algorithms",
+        color: "green-text-gradient",
+      },
+      {
+        name: "GameDev",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/ausmatths/AI-Pacman-Projects",
+  },
+  {
+    name: "Workout Tracker",
+    description:
+      "Comprehensive fitness tracking application with exercise logging, progress monitoring, and personalized workout recommendations. Features intuitive UI and data visualization for fitness goals.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Fitness",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/ausmatths/Workout_Tracker",
+  },
+  {
+    name: "Admin Dashboard",
+    description:
+      "Modern, responsive admin dashboard with real-time analytics, user management, and data visualization. Built with contemporary web technologies for optimal performance and user experience.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Dashboard",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Analytics",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/ausmatths/admin-dashboard",
   },
 ];
 

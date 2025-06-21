@@ -3,25 +3,12 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
   starbucks,
   tesla,
   shopify,
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -30,7 +17,7 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
+    id: "work", 
     title: "Work",
   },
   {
@@ -59,66 +46,146 @@ const services = [
 ];
 
 const technologies = [
+  // Programming Languages
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Python",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Java",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+  },
+  {
+    name: "C++",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+  },
+  {
+    name: "C#",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
   },
   {
     name: "JavaScript",
-    icon: javascript,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
   },
   {
     name: "TypeScript",
-    icon: typescript,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+  },
+  
+  // Web Technologies
+  {
+    name: "HTML 5",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS 3",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
   },
   {
     name: "React JS",
-    icon: reactjs,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Redux",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
   },
   {
     name: "Tailwind CSS",
-    icon: tailwind,
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
   },
   {
     name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Three JS",
-    icon: threejs,
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg",
+  },
+  
+  // Cloud Platforms  
+  {
+    name: "AWS",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
   },
   {
-    name: "git",
-    icon: git,
+    name: "Azure",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg",
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Oracle",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg",
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Docker",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+  },
+  
+  // AI/ML & Data Science
+  {
+    name: "TensorFlow",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg",
+  },
+  {
+    name: "Jupyter",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original.svg",
+  },
+  {
+    name: "Pandas",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg",
+  },
+  {
+    name: "NumPy",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg",
+  },
+  
+  // Databases
+  {
+    name: "MongoDB",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+  },
+  
+  // Development Tools
+  {
+    name: "Git",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+  },
+  {
+    name: "GitHub",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+  },
+  {
+    name: "VS Code",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+  },
+  {
+    name: "PyCharm",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg",
+  },
+  {
+    name: "Figma",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
+  },
+  
+  // Mobile Development
+  {
+    name: "Flutter",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg",
   },
 ];
 
-// Updated with Austin's actual experience
 const experiences = [
   {
     title: "Graduate Assistant, Online Education Design",
     company_name: "Seattle University",
-    icon: starbucks, // You can replace with Seattle University logo later
+    icon: starbucks,
     iconBg: "#383E56",
     date: "June 2024 - Present",
     points: [
@@ -131,7 +198,7 @@ const experiences = [
   {
     title: "Artificial Intelligence Engineering Intern",
     company_name: "RadicalX",
-    icon: tesla, // You can replace with RadicalX logo later
+    icon: tesla,
     iconBg: "#E6DEDD",
     date: "October 2023 - January 2024",
     points: [
@@ -144,7 +211,7 @@ const experiences = [
   {
     title: "NOC-Transportation Specialist",
     company_name: "Amazon",
-    icon: shopify, // You can replace with Amazon logo later
+    icon: shopify,
     iconBg: "#383E56",
     date: "November 2019 - August 2022",
     points: [
@@ -170,7 +237,7 @@ const testimonials = [
     testimonial:
       "His ability to manage complex systems and lead teams made a significant impact on our operational efficiency.",
     name: "Michael Chen",
-    designation: "Operations Manager",
+    designation: "Operations Manager", 
     company: "Amazon",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
@@ -184,7 +251,6 @@ const testimonials = [
   },
 ];
 
-// Updated with Austin's projects from his resume
 const projects = [
   {
     name: "Revv Car Rentals",
